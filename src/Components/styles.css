@@ -1,0 +1,89 @@
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Make sure Swiper container doesn't reserve height for pagination */
+.mySwiper {
+  padding-top: 30px; /* Leave space for progressbar */
+  position: relative;
+}
+
+.swiper-pagination-progressbar {
+  position: absolute;
+  bottom: 10px; /* Place it outside the slider, at the very bottom */
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #e5e7eb;
+  z-index: 10;
+}
+
+.swiper-pagination-progressbar-fill {
+  background-color: #b91c1c; /* Customize your progress color */
+}
+.custom-progressbar {
+  position: relative;
+  height: 4px;
+  width: 100%;
+  background-color: #e5e7eb;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.custom-progressbar .swiper-pagination-progressbar-fill {
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: width 0.3s;
+}
+
+.progress-pointer {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
+    transition: left 0.3s ease;
+    z-index: 20;
+    opacity: 0; /* Add this line to make it invisible */
+  }
