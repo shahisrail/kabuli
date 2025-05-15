@@ -98,7 +98,7 @@ export default function Slider() {
         </button> */}
       </div>
 
-      <div className="mt-4 text-black text-[16px] font-medium max-w-2xl mx-auto text-left">
+      <div className="mt-4 text-black py-3 p-3 mb-5 text-[16px] font-medium max-w-2xl mx-auto text-left">
         <p>
           Located in the lively Moseley village, Kabuli offers a modern yet
           welcoming atmosphere where the focus is always on the food. Each dish
