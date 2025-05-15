@@ -2,14 +2,14 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="w-full flex flex-col items-center justify-center">
+    <div className="w-full flex flex-col items-center justify-center mt-[5px]">
       <img
         src="/assets/Banner.jpg"
         alt="Banner"
         className="mx-auto w-full max-w-6xl  "
       />
       <div className="w-full flex flex-col items-center justify-center px-4">
-        <h2 className="text-center mt-4 text-black text-[35px] max-w-2xl font-semibold">
+        <h2 className="text-center mt-4 text-black text-[24px] md:text-[35px] max-w-2xl font-semibold">
           Kabuli: Gateway to Afghan Flavours
         </h2>
 

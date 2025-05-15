@@ -54,19 +54,21 @@ const Contact = () => {
 
   return (
     <>
-      <div className="text-black">
-        <h2 className="text-center text-2xl font-bold mt-5">CONTACT</h2>
-        <p className="text-left text-[15px] mt-5 max-w-2xl mx-auto py-3">
+      <div className="text-black py-8">
+        <h2 className="text-center text-2xl font-bold mt-6 md:mt-8 md:text-3xl">
+          CONTACT
+        </h2>
+        <p className="text-left text-sm mt-5 max-w-2xl mx-auto px-4 md:text-base">
           Located on Alcester Road in the heart of beautiful Moseley village,
           Kabuli is ready to welcome you. Reach out to us for bookings,
           enquiries, or more information!
         </p>
 
-        <form onSubmit={handleSubmit} className="mt-8 max-w-md mx-auto">
+        <form onSubmit={handleSubmit} className="mt-8 max-w-md mx-auto px-4">
           <div className="mb-4">
             <label
               htmlFor="name"
-              className="block  text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-700 text-sm font-bold mb-2"
             >
               Name:
             </label>
@@ -114,10 +116,10 @@ const Contact = () => {
               required
             />
           </div>
-          <div className="flex items-center justify-center   ">
+          <div className="flex items-center justify-center">
             <div className="border-2 p-2">
               <button
-                className={`bg-tan-100 border-y-2 border-black px-10 py-2 font-bold text-black rounded-none focus:outline-none hover:bg-tan-200 transition duration-300 text-[25px] ${
+                className={`bg-tan-100 border-y-2 border-black px-8 py-2 font-bold text-black rounded-none focus:outline-none hover:bg-tan-200 transition duration-300 text-lg ${
                   isSubmitting ? "opacity-50 cursor-not-allowed" : ""
                 }`}
                 type="submit"
@@ -129,7 +131,7 @@ const Contact = () => {
           </div>
           {submissionResult && (
             <div
-              className={`mt-4 text-sm ${
+              className={`mt-4 text-sm text-center ${
                 submissionResult.success ? "text-green-500" : "text-red-500"
               }`}
             >
@@ -138,23 +140,26 @@ const Contact = () => {
           )}
         </form>
       </div>
-      <div className="flex gap-10 justify-center items-start mt-5 text-black">
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   gap-8 justify-center items-start mt-8 text-black px-4 max-w-3xl lg:max-w-6xl mx-auto">
         <div className="text-center">
-          <h2 className="text-2xl font-bold mt-5 py-2">OPENING TIMES</h2>
-          <p className="text-[17px] font-bold mt-5">Mon – Sun: 12pm – 10pm</p>
-        </div>
-        <div className="text-center">
-          <h2 className="text-2xl font-bold mt-5 py-2">ADDRESS</h2>
-          <p className="text-[17px] font-bold mt-5">
-            120-126 Alcester Road, Moseley, Birmingham, <br />
-            B13 8EE
+          <h2 className="text-2xl font-bold mt-6 py-2 md:text-2xl">
+            OPENING 
+          </h2>
+          <p className="text-base font-bold mt-5 whitespace-pre-line">
+            Mon – Sun: 12pm – 10pm
           </p>
         </div>
         <div className="text-center">
-          <h2 className="text-2xl font-bold mt-5 py-2">CONTACT</h2>
-          <p className="text-[17px] font-bold mt-5">
-            info@kabuli.co.uk <br />
-            +44 (0) 121 714 8328
+          <h2 className="text-2xl font-bold mt-6 py-2 md:text-2xl">ADDRESS</h2>
+          <p className="text-base font-bold mt-5 whitespace-pre-line">
+            120-126 Alcester Road, Moseley, Birmingham, B13 8EE
+          </p>
+        </div>
+        <div className="text-center">
+          <h2 className="text-2xl font-bold mt-6 py-2 md:text-2xl">CONTACT</h2>
+          <p className="text-base font-bold mt-5 whitespace-pre-line">
+            info@kabuli.co.uk +44 (0) 121 714 8328
           </p>
         </div>
       </div>

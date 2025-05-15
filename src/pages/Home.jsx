@@ -5,8 +5,8 @@ import Parallax from '../Components/parallax';
 
 const Home = () => {
     return (
-        <div>
-            <Banner/>
+        <div className='p-2'>
+            <Banner />
             <Slider/>
             <Parallax/>
         </div>

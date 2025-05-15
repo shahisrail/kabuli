@@ -39,11 +39,11 @@ export default function Slider() {
 
   return (
     <>
-      <div className="mx-auto w-full max-w-6xl relative">
+      <div className="mx-auto w-full max-w-6xl relative p-2 md:p-2">
         <Swiper
           ref={swiperRef}
-          slidesPerView={2}
-          spaceBetween={30}
+          slidesPerView={2} // Default to 1 for small devices
+          spaceBetween={10} // Reduced space for small devices
           loop={true}
           autoplay={{
             delay: 3000,
@@ -55,6 +55,18 @@ export default function Slider() {
           }}
           modules={[Pagination, Autoplay]}
           className="mySwiper"
+          breakpoints={{
+            // when window width is >= 768px (md breakpoint)
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            // when window width is >= 1280px (xl breakpoint - assuming large)
+            1280: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+          }}
         >
           <SwiperSlide>
             <img src="/assets/Kabuli-August-LR-15-scaled.jpg" alt="" />
@@ -82,7 +94,7 @@ export default function Slider() {
           </SwiperSlide>
         </Swiper>
 
-        <div className="custom-progressbar">
+        <div className="custom-progressbar mt-2"> {/* Added mt-2 for spacing */}
           <div
             className="swiper-pagination-progressbar-fill"
             ref={progressRef}
@@ -91,14 +103,9 @@ export default function Slider() {
             <div className="progress-pointer" ref={pointerRef}></div>
           )}
         </div>
-
-        {/* Example button to toggle pointer visibility */}
-        {/* <button onClick={() => setShowPointer(!showPointer)}>
-          {showPointer ? "Hide Pointer" : "Show Pointer"}
-        </button> */}
       </div>
 
-      <div className="mt-4 text-black py-3 p-3 mb-5 text-[16px] font-medium max-w-2xl mx-auto text-left">
+      <div className="mt-4 text-black py-2 p-2 mb-4 text-sm font-medium max-w-md mx-auto text-left md:max-w-2xl md:text-base md:p-3 md:py-3 md:mb-5">
         <p>
           Located in the lively Moseley village, Kabuli offers a modern yet
           welcoming atmosphere where the focus is always on the food. Each dish

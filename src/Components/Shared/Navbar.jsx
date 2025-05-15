@@ -4,14 +4,38 @@ import { Link, useLocation } from "react-router-dom";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const [isFixed, setIsFixed] = useState(true); // Initially fixed
 
   // Route পরিবর্তনের সাথে মেনু বন্ধ হবে
   useEffect(() => {
     setMenuOpen(false);
   }, [location]);
 
+  // স্ক্রল করার সময় বা মেনু খোলার সময় Navbar ফিক্সড থাকবে
+  useEffect(() => {
+    const handleScroll = () => {
+      // এখানে আপনি স্ক্রলের উপর ভিত্তি করে ফিক্সড আচরণ পরিবর্তন করতে পারেন যদি চান
+      // আপাতত, স্ক্রল করলেও এটা ফিক্সডই থাকবে কারণ isFixed সবসময় true
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // মেনু খোলার সময় Navbar ফিক্সড করা
+  useEffect(() => {
+    setIsFixed(menuOpen);
+  }, [menuOpen]);
+
   return (
-    <nav className="bg-[#EAD9C5] relative z-10">
+    <nav
+      className={`bg-[#EAD9C5] w-full z-50 ${
+        isFixed ? "fixed top-0" : "sticky top-0"
+      }`}
+    >
       {/* Top Borders */}
       <div className="border-t-2 border-black"></div>
       <div className="border-t-4 border-black mt-3"></div>
@@ -29,7 +53,7 @@ function Navbar() {
                 aria-label="Toggle menu"
               >
                 {menuOpen ? (
-                  // Cross icon (styled like hamburger)
+                  // Cross icon
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="75"
@@ -117,26 +141,28 @@ function Navbar() {
 
       {/* Mobile Dropdown Menu */}
       <div className={menuOpen ? "sm:hidden" : "hidden"} id="mobile-menu">
-        <div className="px-2 pt-2 pb-3 space-y-1">
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Menu Item 1
-          </a>
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Menu Item 2
-          </a>
+        <div className="px-6 pt-4 pb-6 space-y-3">
+          {[
+            { name: "Home", path: "/" },
+            { name: "Ourstory", path: "/Ourstory" },
+            { name: "Menus", path: "/menus" },
+            { name: "Gallery", path: "/gallery" },
+            { name: "Contact", path: "/contact" },
+          ].map((item, index) => (
+            <Link
+              key={index}
+              to={item.path}
+              className="relative block pl-6 py-2 border border-black text-gray-800 text-lg font-medium before:content-['•'] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:text-black"
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
       </div>
 
       {/* Fullscreen Menu (Below Navbar) */}
       {menuOpen && (
-        <div className="fixed z-0 top-[150px] left-0 w-full h-[calc(100%-112px)] bg-[#EAD9C5] bg-opacity-90 flex items-center justify-center">
-          {/* Fullscreen Menu Items */}
+        <div className="fixed z-0 top-[150px] left-0 w-full h-[calc(100%-150px)] bg-[#EAD9C5] bg-opacity-90 flex items-center justify-center">
           <div className="text-white text-2xl text-center space-y-4 max-w-4xl mx-auto">
             <Link to="/" className="block py-2">
               Home
