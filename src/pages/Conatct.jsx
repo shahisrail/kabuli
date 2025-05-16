@@ -54,7 +54,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="text-black py-8">
+      <div className=" py-8">
         <h2 className="text-center text-2xl font-bold mt-6 md:mt-8 md:text-3xl">
           CONTACT
         </h2>
@@ -119,7 +119,7 @@ const Contact = () => {
           <div className="flex items-center justify-center">
             <div className="border-2 p-2">
               <button
-                className={`bg-tan-100 border-y-2 border-black px-8 py-2 font-bold text-black rounded-none focus:outline-none hover:bg-tan-200 transition duration-300 text-lg ${
+                className={`bg-tan-100 border-y-2 border-black px-8 py-2 font-bold  rounded-none focus:outline-none hover:bg-tan-200 transition duration-300 text-lg ${
                   isSubmitting ? "opacity-50 cursor-not-allowed" : ""
                 }`}
                 type="submit"
@@ -141,7 +141,7 @@ const Contact = () => {
         </form>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   gap-8 justify-center items-start mt-8 text-black px-4 max-w-3xl lg:max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   gap-8 justify-center items-start mt-8  px-4 max-w-3xl lg:max-w-6xl mx-auto">
         <div className="text-center">
           <h2 className="text-2xl font-bold mt-6 py-2 md:text-2xl">
             OPENING 

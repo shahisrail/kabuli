@@ -4,7 +4,7 @@ const Gallery = () => {
 
 
   return (
-    <div className="text-black">
+    <div className="">
       <h2 className="text-center text-4xl font-bold mt-5"> GALLERY </h2>
       <p className="text-left text-[15px] mt-5 max-w-2xl mx-auto py-3">
         Our gallery showcases Kabuli’s minimalist design, offering a cosy,
