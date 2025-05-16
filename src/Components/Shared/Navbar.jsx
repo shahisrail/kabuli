@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
@@ -56,8 +57,8 @@ function Navbar() {
                   // Cross icon
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="75"
-                    height="66"
+                    width="40"
+                    height="34"
                     viewBox="0 0 75 66"
                     fill="none"
                   >
@@ -85,8 +86,8 @@ function Navbar() {
                   <a className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="75"
-                      height="66"
+                      width="40"
+                      height="34"
                       viewBox="0 0 75 66"
                       fill="none"
                     >
@@ -115,17 +116,17 @@ function Navbar() {
             {/* Center Logo */}
             <div className="hidden sm:block">
               <div className="flex space-x-4">
-                <a href="#" className="text-white font-bold text-xl">
+                <Link to="/" className="text-white font-bold text-xl">
                   <img src="/assets/logo.png" alt="" />
-                </a>
+                </Link>
               </div>
             </div>
 
             {/* Right Menu Items (Desktop) */}
             <div className="hidden sm:block">
-              <div className="flex space-x-4">
+              <div className="flex ">
                 <Link to="/menus">
-                  <button className="bg-tan-100 border-y-2  border-black px-10 py-2 font-bold text-black rounded-none focus:outline-none hover:bg-tan-200 transition duration-300 text-[20px]">
+                  <button className="bg-tan-100 border-y-2 border-black px-10 font-bold text-black rounded-none focus:outline-none hover:bg-tan-200 transition duration-300 text-[17px]">
                     MENUS
                   </button>
                 </Link>
@@ -162,23 +163,63 @@ function Navbar() {
 
       {/* Fullscreen Menu (Below Navbar) */}
       {menuOpen && (
-        <div className="fixed z-0 top-[150px] left-0 w-full h-[calc(100%-150px)] bg-[#EAD9C5] bg-opacity-90 flex items-center justify-center">
-          <div className="text-white text-2xl text-center space-y-4 max-w-4xl mx-auto">
-            <Link to="/" className="block py-2">
+        <div className="fixed z-0 top-[150px] left-0 w-full h-[calc(100%-150px)] bg-[#EAD9C5] bg-opacity-90  ">
+          <div className="bg-[url('/assets/Vector-1.png')] top-5    bg-cover bg-opacity-0 bg-center text-black text-2xl text-center space-y-4 max-w-5xl p-10 border-l-2 border-r-2 border-black mx-auto">
+            <Link to="/" className="block py-2 hover:underline">
               Home
             </Link>
-            <Link to="/Ourstory" className="block py-2">
+            <Link to="/Ourstory" className="block py-2 hover:underline">
               Ourstory
             </Link>
-            <Link to="/menus" className="block py-2">
+            <Link to="/menus" className="block py-2 hover:underline">
               Menus
             </Link>
-            <Link to="/gallery" className="block py-2">
+            <Link to="/gallery" className="block py-2 hover:underline">
               Gallery
             </Link>
-            <Link to="/contact" className="block py-2">
+            <Link to="/contact" className="block py-2 hover:underline">
               Contact
             </Link>
+            <div className="flex justify-center items-center py-5">
+              <div className="flex space-x-6 text-xl">
+                <a href="#" className="hover:text-gray-700">
+                  <FaFacebookF size={20} />
+                </a>
+                <a href="#" className="hover:text-gray-700">
+                  <FaInstagram size={20} />
+                </a>
+                <a href="#" className="hover:text-gray-700">
+                  <FaTiktok size={20} />
+                </a>
+              </div>
+            </div>
+            <div className="join">
+              <div>
+                <label className="input validator join-item">
+                  <svg
+                    className="h-[1em] opacity-50"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      strokeLinejoin="round"
+                      strokeLinecap="round"
+                      strokeWidth="2.5"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </g>
+                  </svg>
+                  <input type="email" placeholder="mail@site.com" required />
+                </label>
+                <div className="validator-hint hidden">
+                  Enter valid email address
+                </div>
+              </div>
+              <button className="btn btn-neutral join-item">SUBSCRIBE</button>
+            </div>
           </div>
         </div>
       )}

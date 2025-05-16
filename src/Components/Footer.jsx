@@ -98,8 +98,8 @@ function Footer() {
         
       {/* Main Border Box */}
    <div >
-   <div className="flex-grow border-t-4 border-black mb-[-19px]"></div>
-   <div className="relative max-w-screen-xl border-b-  border-r-4 mx-auto border-t-4 border-l-4 border-black flex flex-col md:flex-row text-center md:text-left text-black divide-y-4 md:divide-y-0 md:divide-x divide-black pb-8">
+   <div className="flex-grow border-t-4 border-[#EAD9C5] mb-[-19px]"></div>
+   <div className="relative max-w-screen-xl border-b-  border-r-4 mx-auto border-t-4 border-l-4 border-[#EAD9C5] flex flex-col md:flex-row text-center md:text-left  divide-y-4 md:divide-y-0 md:divide-x divide-[#EAD9C5] pb-8">
         {/* Left Section */}
         <div className="flex-1 mt-10 p-4">
           <nav className="flex flex-wrap justify-center space-x-1 space-y-1 md:space-y-0 md:space-x-2 font-semibold">
@@ -168,11 +168,11 @@ function Footer() {
         {/* Bottom Text */}
       </div>
       <div className="flex justify-center items-center space-x-4 max-w-screen-xl mx-auto mt-[-8px]">
-        <div className="flex-grow border-t-4 border-black"></div>
+        <div className="flex-grow border-t-4 border-[#EAD9C5]"></div>
         <div className="  left-0 right-0 text-center text-xs font-medium z-10 px-4">
           Kabuli © 2024 All rights reserved. Designed & Developed by LetItStart
         </div>
-        <div className="flex-grow border-t-4 border-black"></div>
+        <div className="flex-grow border-t-4 border-[#EAD9C5]"></div>
       </div>
    </div>
     </footer>

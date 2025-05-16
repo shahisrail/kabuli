@@ -9,11 +9,11 @@ const Banner = () => {
         className="mx-auto w-full max-w-6xl  "
       />
       <div className="w-full flex flex-col items-center justify-center px-4">
-        <h2 className="text-center mt-4 text-black text-[24px] md:text-[35px] max-w-2xl font-semibold">
+        <h2 className="text-center mt-12  text-[23px] md:text-[35px] max-w-2xl font-semibold">
           Kabuli: Gateway to Afghan Flavours
         </h2>
 
-        <div className="mt-4 text-black text-[16px] font-medium max-w-2xl text-left">
+        <div className="mt-3 py-2   text-[14px]  max-w-2xl text-left">
           <p>
             Step into Kabuli and embark on a culinary journey through the rich
             and diverse flavors of Afghanistan. Our menu is a gateway to the
