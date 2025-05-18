@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import React, { useState } from "react";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -60,7 +60,7 @@ const Contact = () => {
         </h2>
         <p className="text-left text-sm mt-5 max-w-2xl mx-auto px-4 md:text-base">
           Located on Alcester Road in the heart of beautiful Moseley village,
-          Kabuli is ready to welcome you. Reach out to us for bookings,
+          Lemar is ready to welcome you. Reach out to us for bookings,
           enquiries, or more information!
         </p>
 
@@ -68,7 +68,7 @@ const Contact = () => {
           <div className="mb-4">
             <label
               htmlFor="name"
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-[[#EAD9C5]] text-sm font-bold mb-2"
             >
               Name:
             </label>
@@ -78,14 +78,14 @@ const Contact = () => {
               name="name"
               value={name}
               onChange={handleChange}
-              className="shadow appearance-none border-3 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border-3 rounded w-full py-2 px-3 text-[[#EAD9C5]] leading-tight focus:outline-none focus:shadow-outline"
               required
             />
           </div>
           <div className="mb-4">
             <label
               htmlFor="email"
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-[[#EAD9C5]] text-sm font-bold mb-2"
             >
               Email:
             </label>
@@ -95,14 +95,14 @@ const Contact = () => {
               name="email"
               value={email}
               onChange={handleChange}
-              className="shadow appearance-none border-3 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border-3 rounded w-full py-2 px-3 text-[[#EAD9C5]] leading-tight focus:outline-none focus:shadow-outline"
               required
             />
           </div>
           <div className="mb-6">
             <label
               htmlFor="message"
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-[[#EAD9C5]] text-sm font-bold mb-2"
             >
               Message:
             </label>
@@ -112,14 +112,14 @@ const Contact = () => {
               value={message}
               onChange={handleChange}
               rows="4"
-              className="shadow appearance-none border-3 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border-3 rounded w-full py-2 px-3 text-[[#EAD9C5]] leading-tight focus:outline-none focus:shadow-outline"
               required
             />
           </div>
           <div className="flex items-center justify-center">
             <div className="border-2 p-2">
               <button
-                className={`bg-tan-100 border-y-2 border-black px-8 py-2 font-bold  rounded-none focus:outline-none hover:bg-tan-200 transition duration-300 text-lg ${
+                className={`bg-tan-100 border-y-2 border-[#EAD9C5] px-8 py-2 font-bold  rounded-none focus:outline-none hover:bg-tan-200 transition duration-300 text-sm ${
                   isSubmitting ? "opacity-50 cursor-not-allowed" : ""
                 }`}
                 type="submit"
@@ -159,7 +159,7 @@ const Contact = () => {
         <div className="text-center">
           <h2 className="text-2xl font-bold mt-6 py-2 md:text-2xl">CONTACT</h2>
           <p className="text-base font-bold mt-5 whitespace-pre-line">
-            info@kabuli.co.uk +44 (0) 121 714 8328
+            info@Lemar.co.uk +44 (0) 121 714 8328
           </p>
         </div>
       </div>

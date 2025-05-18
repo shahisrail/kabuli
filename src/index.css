@@ -5,3 +5,15 @@ body {
     Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
 }
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f0f0f0;
+}
+
+body.dark {
+  --bg-color: #110230;
+  --text-color: #ffffff;
+  --card-bg: #1a1a3c;
+}

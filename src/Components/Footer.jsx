@@ -73,7 +73,7 @@
 //           <div className="text-center md:text-right">
 //             <h3 className="font-semibold text-gray-700 mb-1 text-sm">Loyalty Club</h3>
 //             <p className="text-sm text-gray-600">
-//               Get special offers from Kabuli and Opal Club restaurants!
+//               Get special offers from Lemar and Opal Club restaurants!
 //             </p>
 //           </div>
 //         </div>
@@ -81,7 +81,7 @@
 
 //       {/* Bottom Copyright Section */}
 //       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-6 text-center text-xs text-gray-600">
-//         <p>Kabuli © 2024 All rights reserved. Designed & Developed by LeftStart</p>
+//         <p>Lemar © 2024 All rights reserved. Designed & Developed by LeftStart</p>
 //       </div>
 //     </footer>
 //   );
@@ -160,7 +160,7 @@ function Footer() {
         <div className="flex-1 mt-10 p-4 flex flex-col justify-center items-center md:items-start">
           <h4 className="font-bold mb-1">Loyalty Club</h4>
           <p className="text-center md:text-left">
-            Get special offers from Kabuli and Opal Club restaurants!
+            Get special offers from Lemar and Opal Club restaurants!
           </p>
         </div>
 
@@ -170,7 +170,7 @@ function Footer() {
       <div className="flex justify-center items-center space-x-4 max-w-screen-xl mx-auto mt-[-8px]">
         <div className="flex-grow border-t-4 border-[#EAD9C5]"></div>
         <div className="  left-0 right-0 text-center text-xs font-medium z-10 px-4">
-          Kabuli © 2024 All rights reserved. Designed & Developed by LetItStart
+          Lemar © 2024 All rights reserved. Designed & Developed by LetItStart
         </div>
         <div className="flex-grow border-t-4 border-[#EAD9C5]"></div>
       </div>

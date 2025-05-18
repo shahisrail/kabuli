@@ -4,10 +4,10 @@ const Gallery = () => {
 
 
   return (
-    <div className="">
+    <div className=" p-2">
       <h2 className="text-center text-4xl font-bold mt-5"> GALLERY </h2>
       <p className="text-left text-[15px] mt-5 max-w-2xl mx-auto py-3">
-        Our gallery showcases Kabuli’s minimalist design, offering a cosy,
+        Our gallery showcases Lemar’s minimalist design, offering a cosy,
         home-like atmosphere. Each dish and non-alcoholic drink is presented
         with artistry and care, reflecting the essence of Afghan hospitality.
       </p>
@@ -30,7 +30,7 @@ const Gallery = () => {
           </div>
           <div className="py-2">
             <img
-              src="https://kabuli.co.uk/wp-content/uploads/2024/09/Kabuli_Brandbook_Elab-1_240204_2051241-13-3-5.png"
+              src="/assets/Kabuli-August-LR-23-scaled.jpg "
               alt=""
             />
           </div>
@@ -39,13 +39,13 @@ const Gallery = () => {
           <div className="flex gap-2  ">
             <div>
               <img
-                src="https://kabuli.co.uk/wp-content/uploads/2024/10/Kabuli-August-LR-28-scaled.jpg"
+                src="/assets/Kabuli-August-LR-16-scaled.jpg"
                 alt=""
               />
             </div>
             <div>
               <img
-                src="https://kabuli.co.uk/wp-content/uploads/2024/10/Kabuli-August-LR-38-scaled.jpg"
+                src="/assets/Kabuli-August-LR-27-scaled.jpg"
                 alt=""
               />
             </div>

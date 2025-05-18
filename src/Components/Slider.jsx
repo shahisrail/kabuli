@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { BsCircleFill } from "react-icons/bs";
 import "swiper/css";
 import "swiper/css/pagination";
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "./styles.css";
-import { BsCircleFill } from "react-icons/bs";
 
 export default function Slider() {
   const swiperRef = useRef(null);

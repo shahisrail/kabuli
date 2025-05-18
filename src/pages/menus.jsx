@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Menus = () => {
   const [activeTab, setActiveTab] = useState("food");
   const [foodItems] = useState([
-    "KABULI PULAO",
+    "Lemar PULAO",
     "QORMA",
     "KEBABS",
     "SIDES",
@@ -25,11 +25,11 @@ const Menus = () => {
   const isScrollable = itemsToDisplay.length > 6;
   const dishData = [
     {
-      title: "Lamb Kabuli Pulao",
+      title: "Lamb Lemar Pulao",
       description:
         "Savour the heart of Afghan cuisine - tender lamb, simmered in Kabul's aromatic spices, nestled in fragrant rice with carrots and raisins.",
       price: "£22",
-      image: "/assets/Kabuli-August-LR-16-scaled.jpg",
+      image: "/assets/Kabuli-August-LR-27-scaled.jpg",
     },
     {
       title: "Qorma",
@@ -43,7 +43,7 @@ const Menus = () => {
       description:
         "Grilled skewers of marinated meat, offering a smoky and savory delight.",
       price: "£20",
-      image: "/assets/Kabuli-August-LR-16-scaled.jpg",
+      image: "/assets/Kabuli-August-LR-15-scaled.jpg",
     },
   ];
 
@@ -58,8 +58,8 @@ const Menus = () => {
   return (
     <div className=" p-4 md:p-6">
       <h2 className="text-center text-2xl font-bold mb-4 md:mb-6">MENUS</h2>
-      <p className="text-left text-sm   mt-2 md:mt-5 max-w-2xl mx-auto">
-        At Kabuli, our food and drinks are crafted with care and authenticity.
+      <p className="text-left text-[15px]   mt-2 md:mt-5 max-w-2xl mx-auto">
+        At Lemar, our food and drinks are crafted with care and authenticity.
         All our beverages are non-alcoholic, showcasing the finest mixology by
         our skilled bartenders who blend unique flavours. Each drink combines
         creativity and tradition, perfectly complementing our menu to enhance
@@ -70,7 +70,7 @@ const Menus = () => {
       <div className="border-y-2 md:border-y-5 border-[#EAD9C5] flex justify-center gap-4 md:gap-5 max-w-4xl mx-auto mt-4 md:mt-5">
         <h2
           className={`text-center text-xl md:text-3xl   py-2 md:py-3 cursor-pointer ${
-            activeTab === "food" ? " font-extrabold text-base-300" : ""
+            activeTab === "food" ? " font-extrabold text-base-300 dark:text-white" : ""
           }`}
           onClick={() => setActiveTab("food")}
         >
@@ -78,7 +78,7 @@ const Menus = () => {
         </h2>
         <h2
           className={`text-center text-xl md:text-3xl   py-2 md:py-3 cursor-pointer ${
-            activeTab === "drinks" ? " font-extrabold text-base-300" : ""
+            activeTab === "drinks" ? " font-extrabold text-base-300 dark:text-white" : ""
           }`}
           onClick={() => setActiveTab("drinks")}
         >
@@ -142,7 +142,7 @@ const Menus = () => {
                   </h2>
                   <span className="text-md md:text-lg  ">{dish.price}</span>
                 </div>
-                <p className="  text-sm md:text-base leading-relaxed">
+                <p className="  text-[15px] md:text-base leading-relaxed">
                   {dish.description}
                 </p>
               </div>
